@@ -1,120 +1,208 @@
-# Hermes + Claude — 1-Hour Layman Setup Guide
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hermes + Claude — 1-Hour Layman Setup Guide</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#0b0f1a;
+    --paper:#ffffff;
+    --muted:#5b6278;
+    --accent:#6b5bff;
+    --accent-2:#22c79a;
+    --card:#f4f5f9;
+    --bd:#e3e5ec;
+    --shadow:0 12px 40px rgba(11,15,26,.08);
+    --radius:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--paper);color:var(--ink);line-height:1.6;
+  }
+  header{position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd);z-index:50}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px;letter-spacing:-.02em}
+  .brand .mark{font-size:30px}
+  .nav-links a{margin-left:24px;color:var(--muted);font-weight:600;font-size:15px}
+  .nav-links a:hover{color:var(--accent)}
+  .container{max-width:780px;margin:0 auto;padding:0 20px}
+  .hero{padding:70px 0 40px}
+  .hero h1{font-size:40px;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
+  .hero p{font-size:18px;color:var(--muted);margin-bottom:24px}
+  .back{display:inline-block;padding:10px 20px;border-radius:10px;font-weight:700;font-size:15px;border:1px solid var(--bd);color:var(--ink);text-decoration:none;margin-bottom:40px}
+  .back:hover{border-color:var(--accent);color:var(--accent)}
+  section{padding:30px 0}
+  .kicker{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:10px;display:block}
+  h2{font-size:26px;line-height:1.2;margin-bottom:14px}
+  p{margin-bottom:14px;font-size:17px;color:var(--ink)}
+  .lead{font-size:17px;color:var(--muted)}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+  th{text-align:left;padding:10px 8px;border-bottom:2px solid var(--bd);color:var(--muted);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  td{padding:10px 8px;border-bottom:1px solid var(--bd);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .card{background:var(--card);border:1px solid var(--bd);border-radius:var(--radius);padding:22px;margin:16px 0}
+  .card b{color:var(--accent)}
+  blockquote{border-left:4px solid var(--accent);padding-left:16px;margin:12px 0;color:var(--muted);font-style:italic}
+  ol,ul{margin:10px 0 14px 22px}
+  li{margin-bottom:6px;font-size:17px}
+  .btn{display:inline-block;padding:12px 24px;border-radius:10px;font-weight:700;font-size:16px;border:none;cursor:pointer;text-decoration:none}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:#5a4ae6}
+  .btn-outline{background:#fff;border:1px solid var(--bd);color:var(--ink)}
+  .btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+  .footer{border-top:1px solid var(--bd);padding:30px 0;color:var(--muted);font-size:14px;margin-top:40px}
+  .glossary td:first-child{font-weight:700;color:var(--accent)}
+  .level-row td:first-child{font-weight:700}
+  @media (max-width:600px){
+    .hero h1{font-size:30px}
+    table{font-size:13px}
+    th,td{padding:8px 6px}
+  }
+</style>
+</head>
+<body>
 
-**For:** Dr Khairi's USM friend (non-technical)
-**Goal:** Understand Hermes and Claude, and be able to use Hermes within 1 hour
-**Prerequisites:** A Mac, an internet connection, ability to type and search. No coding.
+<header>
+  <div class="container nav">
+    <div class="brand"><span class="mark">🤖</span>Hermes 101</div>
+    <div class="nav-links">
+      <a href="/">← Main lesson</a>
+    </div>
+  </div>
+</header>
 
----
+<div class="container">
+  <a href="/" class="back">← Back to main lesson</a>
 
-## 00:00–00:10 — What is Hermes? (the non-technical version)
+  <section class="hero">
+    <h1>Hermes + Claude — 1-Hour Setup Guide</h1>
+    <p class="lead"><strong>For:</strong> Dr Khairi's USM friend (non-technical) · <strong>Goal:</strong> understand Hermes and Claude, and use Hermes within 1 hour · <strong>Prerequisites:</strong> a Mac, internet, ability to type and search. No coding.</p>
+  </section>
 
-Hermes is your AI **agent** — not just a chatbot.
+  <section>
+    <span class="kicker">00:00–00:10</span>
+    <h2>What is Hermes? (the non-technical version)</h2>
+    <p>Hermes is your AI <strong>agent</strong> — not just a chatbot.</p>
+    <table>
+      <thead><tr><th>Chatbot</th><th>Hermes</th></tr></thead>
+      <tbody>
+        <tr><td>Answers one question</td><td>Plans your work, hands it to the right bots, checks the answer</td></tr>
+        <tr><td>You do all the thinking</td><td>You set one goal; Hermes splits it into tasks</td></tr>
+        <tr><td>No memory of your work</td><td>Specialist bots remember their jobs (café, thesis, repairs, numbers)</td></tr>
+        <tr><td>Can post or send on its own</td><td>Never posts, spends, or deletes without your OK</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Analogy:</strong> Claude is the brain. Hermes is the manager who uses that brain, delegates to specialist staff, checks their work, and brings you the final decision.</p>
+    <p><strong>Specialist bots you'll meet:</strong></p>
+    <ul>
+      <li><strong>cremabot</strong> — Crema Cafe operations and marketing</li>
+      <li><strong>drphbot</strong> — Your DrPH thesis work</li>
+      <li><strong>vision</strong> — System repairs and maintenance</li>
+      <li><strong>friday</strong> — Numbers and evidence</li>
+      <li><strong>llmbot</strong> — Local AI running on your own Mac (private, offline-capable)</li>
+    </ul>
+  </section>
 
-| Chatbot | Hermes |
-|---------|--------|
-| Answers one question | Plans your work, hands it to the right bots, checks the answer |
-| You do all the thinking | You set one goal; Hermes splits it into tasks |
-| No memory of your work | Specialist bots remember their jobs (café, thesis, repairs, numbers) |
-| Can post or send on its own | Never posts, spends, or deletes without your OK |
+  <section>
+    <span class="kicker">00:10–00:25</span>
+    <h2>Step 1 — Open Hermes on your Mac</h2>
+    <ol>
+      <li>Open the <strong>Hermes desktop app</strong> on your Mac. If you don't see it, look in Applications or search Spotlight (Cmd + Space) for "Hermes".</li>
+      <li><strong>Log in.</strong> Use the account Dr Khairi set up for you. If you don't have credentials, ask him — do not guess or create a new account.</li>
+      <li>You'll see a <strong>chat window</strong>. That's your main workspace. Everything starts here.</li>
+    </ol>
+    <blockquote>💡 If you're on your phone: Hermes works the same way. Same chat, same bots.</blockquote>
+  </section>
 
-**Analogy:** Claude is the brain. Hermes is the manager who uses that brain, delegates to specialist staff, checks their work, and brings you the final decision.
+  <section>
+    <span class="kicker">00:25–00:40</span>
+    <h2>Step 2 — Send your first message</h2>
+    <p>Type this exactly (or something like it):</p>
+    <blockquote>"Hello Hermes. I'm new here. Can you plan my week for me? I teach at USM and I help run a café."</blockquote>
+    <p><strong>What happens next:</strong></p>
+    <ol>
+      <li>Hermes reads your message.</li>
+      <li>It splits it into tasks (teaching prep, café admin, personal admin).</li>
+      <li>It routes each task to the right model — fast (Haiku) for simple things, deep (Opus) for harder ones.</li>
+      <li>It shows you a plan, not just a reply.</li>
+    </ol>
+    <p><strong>Your job:</strong> Read the plan. Say "yes" or ask for changes. You're the editor.</p>
+    <p>Try a second message:</p>
+    <blockquote>"Draft an email to a colleague rescheduling next Monday's meeting to Wednesday."</blockquote>
+    <p>Hermes drafts it. You check it. You send it (or not). Hermes <strong>never</strong> sends email as you without your OK.</p>
+  </section>
 
-**Specialist bots you'll meet:**
-- **cremabot** — Crema Cafe operations and marketing
-- **drphbot** — Your DrPH thesis work
-- **vision** — System repairs and maintenance
-- **friday** — Numbers and evidence
-- **llmbot** — Local AI running on your own Mac (private, offline-capable)
+  <section>
+    <span class="kicker">00:40–00:50</span>
+    <h2>Step 3 — Choose the right "brain" for the task</h2>
+    <p>Hermes lets you pick how hard to think:</p>
+    <table>
+      <thead><tr><th>Level</th><th>Model</th><th>Use it for</th></tr></thead>
+      <tbody>
+        <tr><td class="level-row">⚡ Fast</td><td>Claude Haiku</td><td>Looking things up, summarising, quick edits</td></tr>
+        <tr><td class="level-row">🧩 Standard</td><td>Claude Sonnet (default)</td><td>Drafting emails, lesson prep, meeting notes, most daily work</td></tr>
+        <tr><td class="level-row">🔬 Deep</td><td>Claude Opus</td><td>Thesis design, statistics, hard decisions, final review</td></tr>
+        <tr><td class="level-row">🧐 Second opinion</td><td>GPT-6 Luna</td><td>Critiques important plans (different company's model)</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Rule of thumb:</strong> Start fast. Climb to deep only when the task matters (thesis, big café call). Never use second opinion for captions or casual messages.</p>
+  </section>
 
----
+  <section>
+    <span class="kicker">00:50–01:00</span>
+    <h2>Step 4 — Three things you can do today</h2>
+    <p>Pick one and try it now:</p>
+    <ol>
+      <li><strong>Draft an email</strong> — "Write an email to my USM colleague about [topic]."</li>
+      <li><strong>Summarise notes</strong> — Paste rough meeting notes: "Turn these into bullet points and open questions."</li>
+      <li><strong>Make a to-do list</strong> — "I have a busy Thursday. Turn this mess into a simple to-do list: [paste your mess]."</li>
+    </ol>
+    <p>After each one, ask Hermes: "What would you NOT use yourself for?" — this builds your sense of what AI can and can't do.</p>
+  </section>
 
-## 00:10–00:25 — Step 1: Open Hermes on your Mac
+  <section>
+    <span class="kicker">01:00</span>
+    <h2>You're done</h2>
+    <p>You now know:</p>
+    <ul>
+      <li>What Hermes is (an agent with a manager + specialist staff)</li>
+      <li>How to open it and send a message</li>
+      <li>Which brain to use (fast → standard → deep)</li>
+      <li>That nothing posts, spends, or deletes without your OK</li>
+    </ul>
+    <p><strong>Next:</strong> Ask Dr Khairi for the passover file (the setup template) if you want to install Hermes yourself, or just keep using the app he's already set up.</p>
+  </section>
 
-1. Open the **Hermes desktop app** on your Mac.
-   - If you don't see it, look in Applications or search Spotlight (Cmd + Space) for "Hermes".
-2. **Log in.** Use the account Dr Khairi set up for you. If you don't have credentials, ask him — do not guess or create a new account.
-3. You'll see a **chat window**. That's your main workspace. Everything starts here.
+  <section>
+    <span class="kicker">Quick reference</span>
+    <h2>Glossary</h2>
+    <table class="glossary">
+      <thead><tr><th>Term</th><th>Plain meaning</th></tr></thead>
+      <tbody>
+        <tr><td>Prompt</td><td>The instruction you type to Hermes</td></tr>
+        <tr><td>Hallucination</td><td>AI making something up confidently — always double-check</td></tr>
+        <tr><td>Model</td><td>The "brain" behind the answer (Haiku, Sonnet, Opus)</td></tr>
+        <tr><td>Bot / specialist</td><td>A Hermes worker with one job and its own memory</td></tr>
+        <tr><td>Work board</td><td>A to-do board where multi-step tasks move from "to do" to "done"</td></tr>
+      </tbody>
+    </table>
+    <h2>Remember</h2>
+    <ul>
+      <li><strong>You decide.</strong> Hermes recommends; you approve.</li>
+      <li><strong>Verify important info.</strong> AI can invent facts.</li>
+      <li><strong>No jargon needed.</strong> If you can type and search, you can use Hermes.</li>
+    </ul>
+  </section>
 
-> 💡 If you're on your phone: Hermes works the same way. Same chat, same bots.
+  <div class="footer">
+    <p><em>Sedia berkhidmat, doktor. 🫡</em></p>
+    <p style="font-size:12px;color:var(--muted);margin-top:14px">Part of the Hermes 101 lesson · Dr Khairi Safwan · USM · Crema Cafe</p>
+  </div>
+</div>
 
----
-
-## 00:25–00:40 — Step 2: Send your first message
-
-Type this exactly (or something like it):
-
-> "Hello Hermes. I'm new here. Can you plan my week for me? I teach at USM and I help run a café."
-
-**What happens next:**
-1. Hermes reads your message.
-2. It splits it into tasks (teaching prep, café admin, personal admin).
-3. It routes each task to the right model — fast (Haiku) for simple things, deep (Opus) for harder ones.
-4. It shows you a plan, not just a reply.
-
-**Your job:** Read the plan. Say "yes" or ask for changes. You're the editor.
-
-Try a second message:
-
-> "Draft an email to a colleague rescheduling next Monday's meeting to Wednesday."
-
-Hermes drafts it. You check it. You send it (or not). Hermes **never** sends email as you without your OK.
-
----
-
-## 00:40–00:50 — Step 3: Choose the right "brain" for the task
-
-Hermes lets you pick how hard to think:
-
-| Level | Model | Use it for |
-|-------|-------|------------|
-| ⚡ Fast | Claude Haiku | Looking things up, summarising, quick edits |
-| 🧩 Standard | Claude Sonnet (default) | Drafting emails, lesson prep, meeting notes, most daily work |
-| 🔬 Deep | Claude Opus | Thesis design, statistics, hard decisions, final review |
-| 🧐 Second opinion | GPT-6 Luna | Critiques important plans (different company's model) |
-
-**Rule of thumb:** Start fast. Climb to deep only when the task matters (thesis, big café call). Never use second opinion for captions or casual messages.
-
----
-
-## 00:50–01:00 — Step 4: Three things you can do today
-
-Pick one and try it now:
-
-1. **Draft an email** — "Write an email to my USM colleague about [topic]."
-2. **Summarise notes** — Paste rough meeting notes: "Turn these into bullet points and open questions."
-3. **Make a to-do list** — "I have a busy Thursday. Turn this mess into a simple to-do list: [paste your mess]."
-
-After each one, ask Hermes: "What would you NOT use yourself for?" — this builds your sense of what AI can and can't do.
-
----
-
-## 01:00 — You're done
-
-You now know:
-- What Hermes is (an agent with a manager + specialist staff)
-- How to open it and send a message
-- Which brain to use (fast → standard → deep)
-- That nothing posts, spends, or deletes without your OK
-
-**Next:** Ask Dr Khairi for the passover file (the setup template) if you want to install Hermes yourself, or just keep using the app he's already set up.
-
----
-
-### Quick-reference glossary
-
-| Term | Plain meaning |
-|------|---------------|
-| Prompt | The instruction you type to Hermes |
-| Hallucination | AI making something up confidently — always double-check |
-| Model | The "brain" behind the answer (Haiku, Sonnet, Opus) |
-| Bot / specialist | A Hermes worker with one job and its own memory |
-| Work board | A to-do board where multi-step tasks move from "to do" to "done" |
-
-### Remember
-- **You decide.** Hermes recommends; you approve.
-- **Verify important info.** AI can invent facts.
-- **No jargon needed.** If you can type and search, you can use Hermes.
-
----
-
-*Sedia berkhidmat, doktor. 🫡*
+</body>
+</html>
