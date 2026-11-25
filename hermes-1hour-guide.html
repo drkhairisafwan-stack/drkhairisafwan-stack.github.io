@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hermes + Claude — 1-Hour Layman Setup Guide</title>
+<title>Hermes + Claude — 1-Hour Setup Guide for Dr Hanif Deris (USM)</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
 <style>
   :root{
@@ -23,20 +23,22 @@
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     background:var(--paper);color:var(--ink);line-height:1.6;
   }
+  a{color:var(--accent);text-decoration:none;font-weight:600}
+  a:hover{color:#5a4ae6}
+  .container{max-width:780px;margin:0 auto;padding:0 20px}
   header{position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd);z-index:50}
   .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
   .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px;letter-spacing:-.02em}
   .brand .mark{font-size:30px}
   .nav-links a{margin-left:24px;color:var(--muted);font-weight:600;font-size:15px}
   .nav-links a:hover{color:var(--accent)}
-  .container{max-width:780px;margin:0 auto;padding:0 20px}
   .hero{padding:70px 0 40px}
   .hero h1{font-size:40px;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
   .hero p{font-size:18px;color:var(--muted);margin-bottom:24px}
   .back{display:inline-block;padding:10px 20px;border-radius:10px;font-weight:700;font-size:15px;border:1px solid var(--bd);color:var(--ink);text-decoration:none;margin-bottom:40px}
   .back:hover{border-color:var(--accent);color:var(--accent)}
   section{padding:30px 0}
-  .kicker{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:10px;display:block}
+  .kicker{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:12px;display:block}
   h2{font-size:26px;line-height:1.2;margin-bottom:14px}
   p{margin-bottom:14px;font-size:17px;color:var(--ink)}
   .lead{font-size:17px;color:var(--muted)}
@@ -44,19 +46,23 @@
   th{text-align:left;padding:10px 8px;border-bottom:2px solid var(--bd);color:var(--muted);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
   td{padding:10px 8px;border-bottom:1px solid var(--bd);vertical-align:top}
   tr:last-child td{border-bottom:none}
+  table tr:hover td{background:color-mix(in srgb,var(--accent) 5%,transparent)}
   .card{background:var(--card);border:1px solid var(--bd);border-radius:var(--radius);padding:22px;margin:16px 0}
   .card b{color:var(--accent)}
   blockquote{border-left:4px solid var(--accent);padding-left:16px;margin:12px 0;color:var(--muted);font-style:italic}
   ol,ul{margin:10px 0 14px 22px}
   li{margin-bottom:6px;font-size:17px}
+  .win-key{display:inline-block;font-size:13px;font-weight:800;background:#eef2ff;border:1px solid #d6d8ec;color:#3b3a9c;padding:2px 8px;border-radius:6px;font-family:monospace}
   .btn{display:inline-block;padding:12px 24px;border-radius:10px;font-weight:700;font-size:16px;border:none;cursor:pointer;text-decoration:none}
-  .btn-primary{background:var(--accent);color:#fff}
-  .btn-primary:hover{background:#5a4ae6}
+  .btn-primary{background:linear-gradient(135deg,#6b5bff 0%,#22c79a 100%);color:#fff}
+  .btn-primary:hover{opacity:.92}
   .btn-outline{background:#fff;border:1px solid var(--bd);color:var(--ink)}
   .btn-outline:hover{border-color:var(--accent);color:var(--accent)}
   .footer{border-top:1px solid var(--bd);padding:30px 0;color:var(--muted);font-size:14px;margin-top:40px}
   .glossary td:first-child{font-weight:700;color:var(--accent)}
   .level-row td:first-child{font-weight:700}
+  .check{color:var(--accent-2);font-weight:800}
+  .cross{color:#ff5c8a;font-weight:800}
   @media (max-width:600px){
     .hero h1{font-size:30px}
     table{font-size:13px}
@@ -80,7 +86,7 @@
 
   <section class="hero">
     <h1>Hermes + Claude — 1-Hour Setup Guide</h1>
-    <p class="lead"><strong>For:</strong> Dr Khairi's USM friend (non-technical) · <strong>Goal:</strong> understand Hermes and Claude, and use Hermes within 1 hour · <strong>Prerequisites:</strong> a Mac, internet, ability to type and search. No coding.</p>
+    <p class="lead"><strong>For:</strong> Dr Hanif Deris, Lecturer, USM (non-technical) · <strong>Goal:</strong> understand Hermes and Claude, and use Hermes within 1 hour · <strong>Prerequisites:</strong> a Windows PC, internet, ability to type and search. No coding.</p>
   </section>
 
   <section>
@@ -92,47 +98,51 @@
       <tbody>
         <tr><td>Answers one question</td><td>Plans your work, hands it to the right bots, checks the answer</td></tr>
         <tr><td>You do all the thinking</td><td>You set one goal; Hermes splits it into tasks</td></tr>
-        <tr><td>No memory of your work</td><td>Specialist bots remember their jobs (café, thesis, repairs, numbers)</td></tr>
+        <tr><td>No memory of your work</td><td>Specialist bots remember their jobs (teaching, research, admin)</td></tr>
         <tr><td>Can post or send on its own</td><td>Never posts, spends, or deletes without your OK</td></tr>
       </tbody>
     </table>
     <p><strong>Analogy:</strong> Claude is the brain. Hermes is the manager who uses that brain, delegates to specialist staff, checks their work, and brings you the final decision.</p>
     <p><strong>Specialist bots you'll meet:</strong></p>
     <ul>
-      <li><strong>cremabot</strong> — Crema Cafe operations and marketing</li>
-      <li><strong>drphbot</strong> — Your DrPH thesis work</li>
+      <li><strong>drphbot</strong> — Your thesis / research work</li>
       <li><strong>vision</strong> — System repairs and maintenance</li>
       <li><strong>friday</strong> — Numbers and evidence</li>
-      <li><strong>llmbot</strong> — Local AI running on your own Mac (private, offline-capable)</li>
+      <li><strong>llmbot</strong> — Local AI on your Windows PC (private, offline-capable)</li>
     </ul>
   </section>
 
   <section>
     <span class="kicker">00:10–00:25</span>
-    <h2>Step 1 — Open Hermes on your Mac</h2>
+    <h2>Step 1 — Open Hermes on your Windows PC</h2>
     <ol>
-      <li>Open the <strong>Hermes desktop app</strong> on your Mac. If you don't see it, look in Applications or search Spotlight (Cmd + Space) for "Hermes".</li>
+      <li>Open the <strong>Hermes desktop app</strong> on Windows.
+        <ul>
+          <li>Press the <span class="win-key">Start</span> button (or <span class="win-key">Windows key</span>) and type "Hermes".</li>
+          <li>Or look in <span class="win-key">File Explorer</span> &gt; <span class="win-key">Program Files</span> or your desktop shortcut.</li>
+        </ul>
+      </li>
       <li><strong>Log in.</strong> Use the account Dr Khairi set up for you. If you don't have credentials, ask him — do not guess or create a new account.</li>
       <li>You'll see a <strong>chat window</strong>. That's your main workspace. Everything starts here.</li>
     </ol>
-    <blockquote>💡 If you're on your phone: Hermes works the same way. Same chat, same bots.</blockquote>
+    <blockquote>💡 On your phone: Hermes works the same way. Same chat, same bots.</blockquote>
   </section>
 
   <section>
     <span class="kicker">00:25–00:40</span>
     <h2>Step 2 — Send your first message</h2>
     <p>Type this exactly (or something like it):</p>
-    <blockquote>"Hello Hermes. I'm new here. Can you plan my week for me? I teach at USM and I help run a café."</blockquote>
+    <blockquote>"Hello Hermes. I'm new here. Can you plan my week for me? I lecture at USM and have teaching, research, and admin work."</blockquote>
     <p><strong>What happens next:</strong></p>
     <ol>
       <li>Hermes reads your message.</li>
-      <li>It splits it into tasks (teaching prep, café admin, personal admin).</li>
+      <li>It splits it into tasks (lecture prep, student emails, research admin, personal admin).</li>
       <li>It routes each task to the right model — fast (Haiku) for simple things, deep (Opus) for harder ones.</li>
       <li>It shows you a plan, not just a reply.</li>
     </ol>
     <p><strong>Your job:</strong> Read the plan. Say "yes" or ask for changes. You're the editor.</p>
     <p>Try a second message:</p>
-    <blockquote>"Draft an email to a colleague rescheduling next Monday's meeting to Wednesday."</blockquote>
+    <blockquote>"Draft an email to a student rescheduling next Monday's consultation to Wednesday."</blockquote>
     <p>Hermes drafts it. You check it. You send it (or not). Hermes <strong>never</strong> sends email as you without your OK.</p>
   </section>
 
@@ -144,12 +154,12 @@
       <thead><tr><th>Level</th><th>Model</th><th>Use it for</th></tr></thead>
       <tbody>
         <tr><td class="level-row">⚡ Fast</td><td>Claude Haiku</td><td>Looking things up, summarising, quick edits</td></tr>
-        <tr><td class="level-row">🧩 Standard</td><td>Claude Sonnet (default)</td><td>Drafting emails, lesson prep, meeting notes, most daily work</td></tr>
-        <tr><td class="level-row">🔬 Deep</td><td>Claude Opus</td><td>Thesis design, statistics, hard decisions, final review</td></tr>
+        <tr><td class="level-row">🧩 Standard</td><td>Claude Sonnet (default)</td><td>Drafting emails, lecture prep, meeting notes, most daily work</td></tr>
+        <tr><td class="level-row">🔬 Deep</td><td>Claude Opus</td><td>Research design, statistics, hard decisions, final review</td></tr>
         <tr><td class="level-row">🧐 Second opinion</td><td>GPT-6 Luna</td><td>Critiques important plans (different company's model)</td></tr>
       </tbody>
     </table>
-    <p><strong>Rule of thumb:</strong> Start fast. Climb to deep only when the task matters (thesis, big café call). Never use second opinion for captions or casual messages.</p>
+    <p><strong>Rule of thumb:</strong> Start fast. Climb to deep only when the task matters (research design, big decisions). Never use second opinion for casual messages.</p>
   </section>
 
   <section>
@@ -157,7 +167,7 @@
     <h2>Step 4 — Three things you can do today</h2>
     <p>Pick one and try it now:</p>
     <ol>
-      <li><strong>Draft an email</strong> — "Write an email to my USM colleague about [topic]."</li>
+      <li><strong>Draft an email to a student</strong> — "Write an email to my USM student about [topic]."</li>
       <li><strong>Summarise notes</strong> — Paste rough meeting notes: "Turn these into bullet points and open questions."</li>
       <li><strong>Make a to-do list</strong> — "I have a busy Thursday. Turn this mess into a simple to-do list: [paste your mess]."</li>
     </ol>
@@ -170,7 +180,7 @@
     <p>You now know:</p>
     <ul>
       <li>What Hermes is (an agent with a manager + specialist staff)</li>
-      <li>How to open it and send a message</li>
+      <li>How to open it on Windows and send a message</li>
       <li>Which brain to use (fast → standard → deep)</li>
       <li>That nothing posts, spends, or deletes without your OK</li>
     </ul>
@@ -200,7 +210,7 @@
 
   <div class="footer">
     <p><em>Sedia berkhidmat, doktor. 🫡</em></p>
-    <p style="font-size:12px;color:var(--muted);margin-top:14px">Part of the Hermes 101 lesson · Dr Khairi Safwan · USM · Crema Cafe</p>
+    <p style="font-size:12px;color:var(--muted);margin-top:14px">Prepared for Dr Hanif Deris, Lecturer, USM · Part of the Hermes 101 lesson · Dr Khairi Safwan · USM · Crema Cafe</p>
   </div>
 </div>
 
